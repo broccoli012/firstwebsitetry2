@@ -1,0 +1,111 @@
+/* General page styling */
+body {
+	font-family: 'Arial', sans-serif;
+	background-color: #f0f2f5;
+	color: #333;
+	margin: 0;
+	padding: 0;
+	opacity: 0; /* Start hidden */
+	animation: bodyFadeIn 1s ease forwards;
+}
+
+/* Center Content */
+main {
+	max-width: 600px;
+	margin: 100px auto 50px auto;
+	padding: 20px;
+	background-color: white;
+	border-radius: 12px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+	animation: fadeInMain 1.5s ease-out;
+}
+
+/* Navigation styling */
+header nav {
+	background-color: #4CAF50;
+	padding: 10px;
+	text-align: center;
+}
+
+header nav a {
+	color: white;
+	margin: 0 15px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+header nav a:hover {
+	text-decoration: underline;
+}
+
+/* Heading */
+h1 {
+	text-align: center;
+	color: #2c3e50;
+}
+
+/* Input and Button */
+input[type="text"] {
+	width: 80%;
+	padding: 10px 0;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+}
+
+button {
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: transform 0.3s, background-color 0.3s;
+}
+
+button:hover {
+	background-color: #45a049;
+	transform: scale(1.05);
+}
+
+/* Output message */
+#output {
+	margin-top: 20px;
+	font-size: 18px;
+	text-align: center;
+	animation: slideUpOutput 0.8s ease-out;
+}
+
+/* Success and error messages */
+.success {
+	color: green;
+	font-weight: bold;
+}
+
+.error {
+	color: red;
+	font-weight: bold;
+}
+
+/* Smooth page transitions */
+body.fade-out {
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
+
+/* Keyframe animations */
+@keyframes fadeInMain {
+	from { opacity: 0; transform: translateY(20px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUpOutput {
+	from { opacity: 0; transform: translateY(30px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bodyFadeIn {
+	to { opacity: 1; }
+}
+
